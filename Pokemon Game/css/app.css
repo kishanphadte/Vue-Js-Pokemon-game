@@ -1,0 +1,76 @@
+.pName,.eName{
+ text-transform: uppercase;
+ font-weight:bold;
+ font-size:16px;
+ text-align: center;
+ color:#fff;
+ padding: 3px 15px;
+ background: #DA4453;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+min-height:50px;
+}
+.enemypic{
+    float:right;
+}
+.crowdbg{
+    background:url('http://moziru.com/images/fans-clipart-baseball-stadium-6.jpg');
+    background-size: cover;
+}
+.healthbar-wrap{
+    margin: 15px;
+    background-color: rgba(255,0,0,0.8);;
+    border:3px solid #fff;
+}
+.healthbar{
+    background-color:green;
+    color:#fff;
+    padding:3px 4px;
+}
+.start-wrap{
+    text-align: center;
+}
+button{
+    color: #fff;
+    padding:15px;
+    margin:7px;
+    text-transform:capitalize
+}
+button:hover{
+    cursor:pointer;
+    box-shadow:1px 1px 7px rgba(0,0,0,0.5)
+}
+#startGame{
+    background-color: red;
+    letter-spacing:1px;
+    font-weight:bold;
+    font-size:14px
+}
+.attack{
+    background-color: blueviolet;
+}
+.spAttack{
+    background-color: blue;
+}
+.heal{
+    background-color: green;
+}
+.giveUp{
+    background-color: red;
+}
+.disclaimer{
+    background-color: black;
+    color : #fff;
+    font-weight:bold;
+    text-align:center;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:7px 15px
+}
+
+@media (max-width:767px){
+    .disclaimer{
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>   
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> -->
+    <link rel="stylesheet" href="foundation6/css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <section id="app">
+        <div class="grid-container">
+            <div class="grid-x crowdbg">
+                <div class="small-6">
+                    <h4 class="text-left pName">{{player}}</h4>
+                    <div class="healthbar-wrap">
+                        <div class="healthbar text-center" :style="{width: playerHealth + '%'}">
+                            {{ playerHealth }}
+                        </div>
+                    </div>
+                    <img v-bind:src="playerImage" >
+                </div>
+                <div class="small-6">
+                    <h4 class="text-right eName">{{enemy}}</h4>
+                    <div class="healthbar-wrap">
+                        <div class="healthbar text-center" :style="{width: enemyHealth + '%'}">
+                            {{ enemyHealth }}
+                        </div>
+                    </div>
+                    <img v-bind:src="enemyImage" class="enemypic">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="grid-x">
+                <div class="small-12 start-wrap" v-if="!gameOn">
+                    <button id="startGame" @click="startGame">Start New Game</button>
+                </div>
+                <div class="small-12" v-else>
+                    <div class="text-center">
+                        <h3>Game controls</h3>
+                        <button class="attack" @click="attack">Attack</button>
+                        <button class="spAttack" @click="specialAttack">Special attack</button>
+                        <button class="heal" @click="heal">Heal - ({{healCount}}) left</button>
+                        <button class="giveUp" @click="giveUp">Give up!</button>
+                    </div>
+                </div>
+                <div class="small-12 log-wrap">
+
+                </div>
+            </div>
+        </div>
+        <p class="disclaimer">{{ note }}</p>
+    </section>
+    <script src="js/vue.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <!-- <script src="foundation6/js/vendor/jquery.js"></script> -->
+    <!-- <script src="foundation6/js/vendor/foundation.min.js"></script> -->
+    
+</body>
+</html>
